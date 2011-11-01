@@ -1,0 +1,367 @@
+/*
+	@theme D_is_for_dark
+	@override-placeholders html, css, js, php
+
+*/
+/*
+	Version 1.0.0
+*/
+
+@base {
+	color: #e3ddd1;
+	background-color: #272822;
+	insertion-point-color: #fff;
+	selection-background-color: #444444;
+}
+
+tag, source, sourcecode {
+	spell-check: disabled;
+}
+
+tag, tag > string > punctuation {
+	oldcolor: #8FCFFF;
+	lessoldcolor: #9FDFFF;
+}
+
+
+
+/* Basics */
+
+/* HTML Tags < > start and end*/
+tag > punctuation.definition.begin, 
+tag > punctuation.definition.end {
+	color: rgb(184, 233, 245);
+}
+
+/* HTML Tag name*/
+tag name {
+	newcolor: rgb(255, 255, 255);
+	color: rgb(184, 233, 245);
+	background-color: rgb(48, 54, 67);
+}
+
+/* ' " quoted attributes*/
+tag > string.quoted,
+{
+	color: #e3ddd1;
+	/*NQW*/
+}
+
+/* HTML Tag attribute */
+attribute-name, 
+punctuation.definition.tag {
+	color: #e3ddd1;
+	newcolor: #FFFFFF;
+}
+
+/* HTML Tag attribute value */
+tag  attribute-value.value {
+	color: rgb(255, 255, 255);
+	background-color: rgb(48, 54, 67);
+}
+
+tag > string > punctuation {
+	font-weight: normal;
+	newcolor: rgb(255, 255, 255);
+	background-color: rgb(48, 54, 67);
+}
+
+css.embedded attribute-name, 
+css.embedded punctuation.definition.tag {
+}
+
+comment, comment>punctuation, tag.doctype, tag.doctype > *, tag.doctype > string.quoted {
+	color: rgb(117, 117, 117); /*Comment Grey*/
+	font-weight: normal;
+}
+/* Specific HTML Tags */
+
+tag.script name,
+tag.script.open > punctuation.definition,
+tag.script.close > punctuation.definition{
+	color: rgb(222, 139, 101);
+	/* Red script */
+	background-color: #272822;
+	/* BG color */
+}
+tag.style name,
+tag.style.open > punctuation.definition,
+tag.style.close > punctuation.definition,
+{
+	color: rgb(255, 212, 251);
+	/* Script pink */
+	background-color: #272822;
+}
+
+tag.h1, tag.h1 * {
+	font-weight: bold;
+	color: #fff;
+}
+
+
+latex.function function - parameter, latex.keyword {
+	color: #699d36;
+}
+
+string.quoted-alt {
+	bluecolor: #1a93ae;
+	bluebackground-color: #f4f9fe;
+	color: #1aa1a1;
+	background-color: rgba(235,252,254,0.5);
+}
+
+html.entity{
+	background-color: rgb(48, 54, 67);
+}
+
+
+
+
+
+
+
+open-bracket, close-bracket {
+}
+
+support.function, function-call {
+	color: #4e279a;
+	font-weight: boldd;
+}
+
+keyword.control, storage.type {
+	color: #6700b9;
+}
+
+
+
+invalid {
+	background-color: #f93232;
+	color: #f9f2ce;
+}
+invalid.illegal.bad-angle-bracket.html {
+    color: #96cafe;
+    background-color: transparent;
+}
+
+textile > header {
+	font-weight: bold;
+}
+
+
+
+/* CSS
+------------------------------------------------------------- */
+
+css selector,
+css at-rule,
+css keyword { 
+    color: rgb(102, 217, 239); 
+    /*Blue Light*/
+}
+
+css property-list > property-value,	
+css property-list > property-value > function,
+css constantXXX,
+css unit.keyword,
+css numeric{ 
+	color: rgb(166, 226, 43); 
+	/*Green Bananna*/
+}
+
+css property-list > property-name,	
+css.punctuation.separator.key-value,
+css.rule.punctuation.terminator 	
+{ 
+	color: rgb(255, 164, 251); 
+	/*Pink Hot*/
+}
+
+css punctuation.section,
+css punctuation.begin,
+css punctuation.end,
+css comment, 
+{
+	color: rgb(117, 117, 117); 
+	/*Comment Grey*/
+}
+/*
+TODO:
+Set css value comma to be grey color
+Set css brackets to grey
+
+*/
+
+/* JS + PHP
+-------------------------------------------------------------- */
+
+operator {
+}
+
+operator.logical {
+	color: rgb(180, 135, 255 );
+	/* Purple */
+}
+
+language.boolean{
+	color: rgb(180, 135, 255 );
+	background-color: rgb(50, 47, 55);
+	/* Purple with bg */
+}
+constant.numeric{
+	color: rgb(180, 135, 255 );
+	background-color: rgb(50, 47, 55);
+	/* Purple with bg */
+}
+
+string.quoted {
+	color: rgb(255, 144, 31);
+	background-color: rgb(56, 46, 32);
+}
+
+constant.language.null {
+	color: #7653c1;
+	background-color: rgb(50, 47, 55);
+}
+
+
+/* JavaScript
+-------------------------------------------------------------- */
+
+js variable {
+}
+
+
+js function{
+ color: rgb(123, 255, 250);
+ /* JS light blue */
+}
+js function name{
+ color: rgb(123, 255, 250);
+ background-color: rgb(52, 84, 79);
+ /* JS light blue + bg */
+}
+
+js variable > punctuation {
+	color: #865fdb;
+}
+
+js keyword{
+	color: rgb(32,176,255);
+}
+
+entity.name.type.instance.js {
+	color: #ffffb6;
+	text-decoration: underline;
+}
+
+string.regex.js, constant.character.escape.js {
+    color: #d27e00;	
+}
+
+punctuation.definition.string.begin.js, 
+punctuation.definition.string.end.js {
+	color: #d183ad;
+}
+
+
+
+constant.character.escape.js {
+	color: #ffa1ca;
+}
+
+
+
+
+/* PHP
+------------------------------------------------------------- */
+php {
+	background-color: #272822;
+}
+
+
+php bracket,
+php question-mark,
+php keyword.definition,
+{
+	color: rgb(232,77,52);
+	/* Php red */
+}
+
+php variable,
+php punctuation.dollar{
+	color: rgb(61, 224, 253);
+	/* Php var blue */
+}
+
+php function.keyword.language,
+php function.definition,
+php function.keyword.controll,
+php keyword{
+	color: rgb(99, 191, 116);
+	/* Php green*/
+}
+
+php function.variable{
+	color: rgb(108, 252, 220);
+}
+
+/*
+keyword.control.flow, 
+keyword.control.include {
+	color: #96cafe;
+}
+*/
+
+php keyword.storage{
+	color: rgb(212, 128, 128);
+	/* Php salmon */
+}
+
+
+/*
+identifier.variable.local {
+	color: #c3c2fe;
+}
+
+literal.string.quoted, literal.numeric {
+    color: #f098c8;
+}
+*/
+
+
+
+
+
+
+XXXsupport.function.misc.css {
+    color: #96cafe;
+}
+
+XXXpunctuation.section.function.css {
+    color: #fff;
+}
+
+XXXvariable.parameter {
+    color: #c6c5fe;
+}
+
+zkeyword.other.zunit.css {
+    color: #96cafe;
+}
+
+zconstant.nzumeric.css, {
+    color: #ee9fd3;
+}
+
+zconstant.zother.color.css {
+    color: #99cc99;
+}
+
+identifier.function.support_mysql > delimiter.balanced.parenthesis.begin, identifier.function.support.math > delimiter.balanced.parenthesis.begin {
+	color: #cfcb90;
+}
+
+XXXdelimiter.embedded.source.php {
+    color: #92d363 !important;
+}
+
