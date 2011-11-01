@@ -4,7 +4,7 @@
 
 */
 /*
-	Version 1.0.0
+	Version 1.0.1
 */
 
 @base {
@@ -115,11 +115,6 @@ html.entity{
 }
 
 
-
-
-
-
-
 open-bracket, close-bracket {
 }
 
@@ -184,12 +179,7 @@ css comment,
 	color: rgb(117, 117, 117); 
 	/*Comment Grey*/
 }
-/*
-TODO:
-Set css value comma to be grey color
-Set css brackets to grey
 
-*/
 
 /* JS + PHP
 -------------------------------------------------------------- */
@@ -305,18 +295,17 @@ php function.variable{
 	color: rgb(108, 252, 220);
 }
 
-/*
-keyword.control.flow, 
-keyword.control.include {
-	color: #96cafe;
-}
-*/
+
 
 php keyword.storage{
 	color: rgb(212, 128, 128);
 	/* Php salmon */
 }
 
+
+identifier.function.support_mysql > delimiter.balanced.parenthesis.begin, identifier.function.support.math > delimiter.balanced.parenthesis.begin {
+	color: #cfcb90;
+}
 
 /*
 identifier.variable.local {
@@ -328,11 +317,15 @@ literal.string.quoted, literal.numeric {
 }
 */
 
+/*
+keyword.control.flow, 
+keyword.control.include {
+	color: #96cafe;
+}
+*/
 
 
-
-
-
+/*
 XXXsupport.function.misc.css {
     color: #96cafe;
 }
@@ -357,11 +350,11 @@ zconstant.zother.color.css {
     color: #99cc99;
 }
 
-identifier.function.support_mysql > delimiter.balanced.parenthesis.begin, identifier.function.support.math > delimiter.balanced.parenthesis.begin {
-	color: #cfcb90;
-}
+
 
 XXXdelimiter.embedded.source.php {
     color: #92d363 !important;
 }
+
+*/
 
